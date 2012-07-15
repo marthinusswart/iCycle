@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Excersizes">
+  <DataContextMoniker Name="/ExercisesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d33f6caf-d94e-4177-9820-b77fff38ed90" absoluteBounds="4.625, 1.75, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/ExercisesDataContext/ExerciseRoute" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bbd08f50-8af5-40f7-8684-bd543bcca683" absoluteBounds="4.64, 2.21, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a3f6f33f-3df4-4be2-bf56-2c87f88ff278" absoluteBounds="1.625, 1.5, 2, 3.23266845703125">
+      <DataClassMoniker Name="/ExercisesDataContext/Exercise" />
+      <nestedChildShapes>
+        <elementListCompartment Id="81efa9a9-9360-4b77-9863-8bc21da127ad" absoluteBounds="1.6400000000000001, 1.96, 1.9700000000000002, 2.67266845703125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.625 : 2.46242390950521); (3.625 : 2.46242390950521)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ExercisesDataContext/ExerciseRoute/ExerciseRoute_Exercise" />
+      <nodes>
+        <classShapeMoniker Id="d33f6caf-d94e-4177-9820-b77fff38ed90" />
+        <classShapeMoniker Id="a3f6f33f-3df4-4be2-bf56-2c87f88ff278" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="495a39e6-6c6d-4b6f-8134-c81eba2f9581" absoluteBounds="4.625, 3.875, 2, 1.0961531575520833">
+      <DataClassMoniker Name="/ExercisesDataContext/TimeZone" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6305aef3-c3d8-4155-a96b-bd41cbd43848" absoluteBounds="4.64, 4.335, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.625 : 4.30383422851563); (3.625 : 4.30383422851563)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ExercisesDataContext/TimeZone/TimeZone_Exercise" />
+      <nodes>
+        <classShapeMoniker Id="495a39e6-6c6d-4b6f-8134-c81eba2f9581" />
+        <classShapeMoniker Id="a3f6f33f-3df4-4be2-bf56-2c87f88ff278" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="iCycle" Class="ExercisesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(local);Initial Catalog=iCycle;Integrated Security=True" SettingsObjectName="iCycle.Properties.Settings" SettingsPropertyName="iCycleConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Route" Member="ExerciseRoutes">
+    <Type Name="ExerciseRoute">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Map" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Distance" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Association Name="ExerciseRoute_Exercise" Member="Exercises" OtherKey="RouteId" Type="Exercise" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Exercise" Member="Exercises">
+    <Type Name="Exercise">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ExerciseDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AverageSpeed" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="TopSpeed" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Distance" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Duration" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Calories" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AverageHeartRate" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaximumHeartRate" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DurationInZone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FatBurned" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RouteId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ZoneUpper" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ZoneLower" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TimeZoneId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ExerciseRoute_Exercise" Member="ExerciseRoute" ThisKey="RouteId" Type="ExerciseRoute" IsForeignKey="true" />
+      <Association Name="TimeZone_Exercise" Member="TimeZone" ThisKey="TimeZoneId" Type="TimeZone" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TimeZone" Member="TimeZones">
+    <Type Name="TimeZone">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="TimeZone_Exercise" Member="Exercises" OtherKey="TimeZoneId" Type="Exercise" />
+    </Type>
+  </Table>
+</Database>

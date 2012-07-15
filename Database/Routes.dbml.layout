@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Routes">
+  <DataContextMoniker Name="/RoutesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="85f36c24-e996-4a4d-9044-50a9c3f7f5cf" absoluteBounds="3.375, 1.875, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/RoutesDataContext/Route" />
+      <nestedChildShapes>
+        <elementListCompartment Id="70a4b17b-b1de-4d99-a9a3-59ef73f6603d" absoluteBounds="3.39, 2.335, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="iCycle" Class="WeeklySummaryDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(local);Initial Catalog=iCycle;Integrated Security=True" SettingsObjectName="iCycle.Properties.Settings" SettingsPropertyName="iCycleConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.WeeklyZoneSummary" Member="WeeklyZoneSummaries">
+    <Type Name="WeeklyZoneSummary">
+      <Column Name="DurationLightZone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DurationModerateZone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DurationHardZone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="WeekStartDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
